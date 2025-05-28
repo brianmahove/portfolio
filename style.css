@@ -107,13 +107,11 @@ header .container {
     align-items: center;
 }
 
-
-
 .logo img {
     width: 50px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-  }
+}
 
 nav ul {
     list-style: none;
@@ -199,13 +197,64 @@ nav ul li a.active::after {
     animation: slideInFromLeft 1s ease-out;
 }
 
-.title {
-    font-size: 1.8em;
-    color: var(--primary-color);
-    font-weight: 500;
-    margin-bottom: 30px;
-    animation: slideInFromLeft 1.2s ease-out;
+/* --- IMPORTANT: Typing Effect CSS --- */
+/* This will now apply to the <p class="title" id="dynamic-text"> element directly */
+
+.title-container {
+    position: relative;
+    display: inline-block; /* Makes the container wrap the content */
+    /* Remove padding/background here if you want the text to be raw,
+       or keep it if you want a subtle highlight around the typing text */
+    /* padding: 5px 10px; */ /* Adjust or remove as desired */
+    /* background-color: var(--card-bg); */ /* Adjust or remove as desired */
+    /* border-radius: var(--border-radius); */ /* Adjust or remove as desired */
+    /* box-shadow: 0 2px 10px rgba(0,0,0,0.1); */ /* Adjust or remove as desired */
+    margin-bottom: 30px; /* Maintain spacing */
 }
+
+/* Modified .title for the typing effect */
+.title {
+    font-size: 2.5em; /* Match h2 in main content or adjust for hero */
+    font-weight: bold;
+    color: var(--primary-color);
+    white-space: nowrap; /* Keep text on one line for the typing effect */
+    overflow: hidden; /* **Crucial:** Hides text until it's "typed" */
+    border-right: .15em solid orange; /* The blinking cursor */
+    animation: blink-caret .75s step-end infinite;
+    display: inline-block; /* Essential for border-right to act as cursor */
+    min-width: 5px; /* Ensures cursor is visible even when empty */
+    min-height: 1.2em; /* Prevents layout shift if text is temporarily empty */
+    vertical-align: middle; /* Align cursor vertically with text */
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: orange; }
+}
+
+/* Responsive adjustments for .title-container and .title */
+@media (max-width: 992px) {
+    .title {
+        font-size: 2em; /* Adjust for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.5em; /* Even smaller for mobile */
+        /* If text is center-aligned on small screens, you might need to adjust container positioning */
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.1em;
+    }
+}
+/* --- END: Typing Effect CSS --- */
+
 
 .social-icons {
     display: flex;
@@ -317,7 +366,6 @@ nav ul li a.active::after {
     right: -7px;
 }
 
-
 /* About Me Section */
 .about-me-section {
     padding: 80px 0;
@@ -346,7 +394,6 @@ nav ul li a.active::after {
     max-width: 800px;
     border: none;
 }
-
 
 .services-grid {
     display: grid;
@@ -732,10 +779,6 @@ footer .container {
         font-size: 3.5em;
     }
 
-    .hero-section .title {
-        font-size: 1.5em;
-    }
-
     .hero-section .right-half img {
         margin-top: 40px;
     }
@@ -801,10 +844,6 @@ footer .container {
         font-size: 2.8em;
     }
 
-    .hero-section .title {
-        font-size: 1.3em;
-    }
-
     .it-berries-section h2 {
         font-size: 2.5em;
     }
@@ -843,10 +882,6 @@ footer .container {
     .hero-section .name {
         font-size: 2.2em;
     }
-    .hero-section .title {
-        font-size: 1.1em;
-    }
-
     .social-icons {
         justify-content: center;
     }
@@ -920,10 +955,6 @@ footer .container {
 .animated.fade-in.is-visible {
     opacity: 1;
 }
-
-
-
-/* style.css - Add these new rules */
 
 /* --- Project Detail Page Specific Styles --- */
 
@@ -1079,7 +1110,6 @@ main {
     border-color: var(--primary-color);
 }
 
-
 /* Responsive Video Container */
 /* The inline style for the iframe is good, but we can define the container style here */
 .video-container {
@@ -1101,7 +1131,6 @@ main {
     height: 100%;
     border: none;
 }
-
 
 /* --- Media Queries for Responsiveness (adjust existing ones for new elements) --- */
 

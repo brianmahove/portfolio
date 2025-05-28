@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduConnect - Brian Mahove Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <a id="top"></a>
+  <header>
+    <div class="container">
+      <div class="logo">
+        <a href="index.html">
+          <img src="assets/bm_logo.png" alt="Portfolio Logo" />
+        </a>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About me</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact" class="contact-button">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-detail-section">
+      <div class="container">
+        <h1>EduConnect</h1>
+        <p class="project-subtitle">📚 Full-Stack Mobile Learning Platform (Flutter + Node.js + MongoDB)</p>
+
+        <div class="project-image">
+          <img src="assets/educonnect.jpg" alt="EduConnect Screenshot"/>
+        </div>
+
+        <div class="project-description">
+          <h2>Project Overview</h2>
+          <p>
+            EduConnect is a comprehensive mobile application 📱 designed to create an intuitive and efficient online learning environment. It showcases full-stack development capabilities, integrating a modern cross-platform mobile frontend with a scalable, secure backend infrastructure. 🔐
+          </p>
+
+          <h3>🛠️ Technologies Used:</h3>
+          <ul>
+            <li>Frontend: Flutter (Dart)</li>
+            <li>Backend: Node.js, Express.js</li>
+            <li>Database: MongoDB Atlas ☁️</li>
+            <li>ODM: Mongoose</li>
+            <li>Authentication: JWT 🔑, bcryptjs</li>
+            <li>Environment Management: dotenv</li>
+            <li>HTTP Client: http package</li>
+            <li>Local Storage: shared_preferences</li>
+            <li>CORS Handling: cors middleware</li>
+          </ul>
+
+          <h3>🚀 Key Features & Technical Implementation:</h3>
+
+          <h4>🔐 Robust User Authentication & Authorization:</h4>
+          <ul>
+            <li>Secure registration and login for "Student" and "Instructor" roles</li>
+            <li>JWT-based token authentication with session management</li>
+            <li>Password hashing with bcryptjs</li>
+            <li>Protected routes with authentication middleware</li>
+          </ul>
+
+          <h4>📘 Dynamic Course Management:</h4>
+          <ul>
+            <li>Instructors can manage course details (CRUD)</li>
+            <li>Students browse/search courses and view details</li>
+            <li>RESTful API endpoints: <code>/api/courses</code></li>
+          </ul>
+
+          <h4>📝 Streamlined Course Enrollment:</h4>
+          <ul>
+            <li>Students enroll and view enrolled courses</li>
+            <li>Backend API endpoint: <code>/api/enrollments</code></li>
+          </ul>
+
+          <h4>📤 Assignment Submission & Tracking:</h4>
+          <ul>
+            <li>Submit text-based assignments</li>
+            <li>Track submissions linked to courses</li>
+          </ul>
+
+          <h4>🧠 Interactive Quizzing Module:</h4>
+          <ul>
+            <li>Instructors create quizzes with correct answers</li>
+            <li>Students take quizzes with instant scoring</li>
+            <li>Endpoints: <code>/api/quizzes</code>, <code>/api/quiz-results</code></li>
+          </ul>
+
+          <h3>🏗️ Architectural Highlights:</h3>
+          <ul>
+            <li>RESTful API design using Express.js</li>
+            <li>Clean separation: routes, controllers, models, middleware</li>
+            <li>Flutter structured with screens, widgets, api, models, utils</li>
+            <li>Asynchronous handling with <code>Future</code> and <code>async/await</code></li>
+            <li>Cloud-based MongoDB Atlas for scalable storage</li>
+            <li>Environment variables managed with <code>dotenv</code></li>
+          </ul>
+
+          <h3>🐛 Challenges & Solutions:</h3>
+          <ul>
+            <li>❗ Null check operator issues in Dart fixed with null-aware operators</li>
+            <li>🔗 URI Malformation fixed via URL-encoding credentials</li>
+            <li>📁 .env errors resolved by ensuring correct file loading order</li>
+            <li>💥 JSON parsing errors handled with try-catch and improved logging</li>
+          </ul>
+
+          <div class="project-links">
+            <a href="#" class="project-link-button">🌐 Live Demo</a>
+            <a href="#" class="project-link-button">📂 GitHub Repo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <a href="#top" class="back-to-top"># BACK TO TOP</a>
+      <div class="footer-social-icons">
+        <a href="https://www.facebook.com/mahovebrian" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/brianmahove" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/@techondemand_" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+        <a href="https://wa.me/263778686550?text=How%20are%20you%20?I%20am%20___." class="footer-social-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
+      <p class="copyright">&copy;2025 Brian Mahove All Rights Reserved.</p>
+    </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

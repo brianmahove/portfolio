@@ -37,7 +37,7 @@
                 <div class="left-half">
                     <p class="greeting">Hi, I am</p>
                     <h1 class="name">Brian Mahove</h1>
-                    <p class="title">Software Developer / AI/ML Developer</p>
+                    <p class="title" id="dynamic-text"></p>
                     <div class="social-icons">
                         <a href="https://wa.me/+263778686550?text=Hi%20Brian!%20I%20just%20visited%20your%20portfolio%20and%20I%27m%20impressed." class="social-icon" target="_blank" rel="noopener noreferrer">
                           <i class="fab fa-whatsapp"></i>
@@ -322,8 +322,8 @@
                                 <h3>AgriXpert</h3>
                                 <p>Coded | Designed</p>
                                 <div class="overlay-links">
-                                    <a href="#" class="overlay-link">DEMO</a>
-                                    <span>|</span>
+                                    <a href="https://youtu.be/qHkTNgT9UC8?si=-BReuIWkJQpcWXgT" class="overlay-link" target="_blank" rel="noopener">DEMO</a>
+                                    <span>|</span> 
                                     <a href="agrixpert.html" class="overlay-link">MORE</a> </div>
                             </div>
                         </div>
@@ -334,8 +334,8 @@
                                 <h3>Guest House App</h3>
                                 <p>Coded</p>
                                 <div class="overlay-links">
-                                    <a href="#" class="overlay-link">DEMO</a>
-                                    <span>|</span>
+                                    <a href="https://youtu.be/-EoM0JkiK5Q?si=QN-AHU62OyZU6gaq" class="overlay-link" target="_blank" rel="noopener">DEMO</a>
+                                    <span>|</span> 
                                     <a href="guesthouse.html" class="overlay-link">MORE</a> </div>
                             </div>
                         </div>
@@ -346,8 +346,8 @@
                                 <h3>Notes App</h3>
                                 <p>Designed</p>
                                 <div class="overlay-links">
-                                    <a href="#" class="overlay-link">DEMO</a>
-                                    <span>|</span>
+                                   <a href="https://youtu.be/1Q4l48konDw?si=IXDhD0EXOf-lyuOX" class="overlay-link" target="_blank" rel="noopener">DEMO</a>
+                                    <span>|</span> 
                                     <a href="notes.html" class="overlay-link">MORE</a> </div>
                             </div>
                         </div>
@@ -358,8 +358,8 @@
                                 <h3>Todo App</h3>
                                 <p>Coded</p>
                                 <div class="overlay-links">
-                                    <a href="#" class="overlay-link">DEMO</a>
-                                    <span>|</span>
+                                     <a href="https://youtu.be/Vi7F1D1sBsE?si=hFOfLCaYE4TQDvIO" class="overlay-link" target="_blank" rel="noopener">DEMO</a>
+                                    <span>|</span> 
                                     <a href="todo.html" class="overlay-link">MORE</a> </div>
                             </div>
                         </div>
@@ -367,11 +367,11 @@
                         <div class="portfolio-item" data-category="coded">
                             <img src="assets/guesthouse.jpg" alt="Guest House App">
                             <div class="portfolio-overlay">
-                                <h3>Guest House App</h3>
+                                <h3>Snake Game</h3>
                                 <p>Coded</p>
                                 <div class="overlay-links">
-                                    <a href="#" class="overlay-link">DEMO</a>
-                                    <span>|</span>
+                                  <a href="https://youtu.be/qHkTNgT9UC8?si=-BReuIWkJQpcWXgT" class="overlay-link" target="_blank" rel="noopener">DEMO</a>
+                                    <span>|</span> 
                                     <a href="guesthouse.html" class="overlay-link">MORE</a> </div>
                             </div>
                         </div>
@@ -446,5 +446,56 @@
     </footer>
 
     <script src="script.js"></script>
+
+
+    <script>
+    // Your JavaScript code here
+    const dynamicTextElement = document.getElementById('dynamic-text');
+    const phrases = [
+        "Software Developer",
+        "Mobile App Developer",
+        "Web Developer",
+        "AI/ML Developer",
+        "Full-Stack Developer",
+        "Data Scientist"
+    ];
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100; // milliseconds per character
+    let deletingSpeed = 50; // milliseconds per character
+    let pauseBeforeDelete = 1500; // milliseconds
+    let pauseBeforeType = 500; // milliseconds
+
+    function typeWriter() {
+        const currentPhrase = phrases[phraseIndex];
+
+        if (isDeleting) {
+            dynamicTextElement.textContent = currentPhrase.substring(0, charIndex - 1);
+            charIndex--;
+            if (charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                setTimeout(typeWriter, pauseBeforeType);
+            } else {
+                setTimeout(typeWriter, deletingSpeed);
+            }
+        } else {
+            dynamicTextElement.textContent = currentPhrase.substring(0, charIndex + 1);
+            charIndex++;
+            if (charIndex === currentPhrase.length) {
+                isDeleting = true;
+                setTimeout(typeWriter, pauseBeforeDelete);
+            } else {
+                setTimeout(typeWriter, typingSpeed);
+            }
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        typeWriter();
+    });
+</script>
+
 </body>
 </html>
