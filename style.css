@@ -108,7 +108,7 @@ header .container {
 }
 
 .logo img {
-    width: 50px; /* Adjust width as needed */
+    width: 40px; /* Adjust width as needed */
     height: auto; /* Maintain aspect ratio */
     cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
 }
@@ -282,7 +282,7 @@ nav ul li a.active::after {
 }
 
 .hero-section .right-half img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -960,7 +960,7 @@ footer .container {
 
 /* Ensure content starts below the fixed header */
 main {
-    padding-top: 80px; /* Roughly the height of the header to prevent content from going under */
+    padding-top: 0px; /* Roughly the height of the header to prevent content from going under */
     /* You might need to adjust this value based on your header's exact height and responsiveness */
 }
 
@@ -992,7 +992,7 @@ main {
 }
 
 .project-image img {
-    max-width: 15%;
+    max-width: 95%;
     height: auto;
     border-radius: var(--border-radius);
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
