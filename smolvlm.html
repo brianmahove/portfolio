@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AgriXpert - Brian Mahove Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body>
+  <a id="top"></a>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html">
+              <img src="assets/bm_logo.png" alt="To-Do App Logo" />
+            </a>
+          </div>
+       
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About me</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact" class="contact-button">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main></main>
+<section class="project-detail-section">
+  <div class="container">
+    <h1>SmolVLM Flutter App</h1>
+    <p class="project-subtitle">Offline Real-time AI Camera Assistant (Flutter + LLaMA.cpp)</p>
+
+    <div class="project-image">
+      <img src="assets/smolvlm.png" alt="SmolVLM App Screenshot"/>
+    </div>
+
+    <div class="project-description">
+      <h2>Project Overview</h2>
+      <p>
+        SmolVLM Flutter App is a real-time, offline AI camera assistant built using Flutter and LLaMA.cpp. It captures live camera frames and sends them to a locally hosted LLaMA multimodal server running SmolVLM-500M, which responds with intelligent, natural language descriptions of the scene.
+      </p>
+
+      <p>
+        This project demonstrates how AI and computer vision can run directly on-device, making it useful for accessibility, education, smart agriculture, and robotics — all without relying on cloud services.
+      </p>
+
+      <h3>Key Features:</h3>
+      <ul>
+        <li>📷 Captures images using front/back camera with seamless switching</li>
+        <li>🔄 Sends frames to the AI server every few seconds</li>
+        <li>🧠 Generates real-time smart feedback using SmolVLM-500M model</li>
+        <li>🛠️ Fully offline setup — no internet required</li>
+        <li>🧼 Handles UI layout and preview stretching for clean UX</li>
+      </ul>
+
+      <h3>Technologies Used:</h3>
+      <p>
+        Flutter, Dart, Camera plugin, SmolVLM-500M-Instruct-f16.gguf (model), llama-server from LLaMA.cpp, Base64 communication
+      </p>
+
+      <h3>How It Works:</h3>
+      <ol>
+        <li>Flutter app captures camera frames every few seconds.</li>
+        <li>Encodes the frame as a Base64 image.</li>
+        <li>Sends the image to a locally running LLaMA server.</li>
+        <li>Server uses SmolVLM to generate a description.</li>
+        <li>App displays the AI-generated feedback in real-time.</li>
+      </ol>
+
+      <h3>Use Cases:</h3>
+      <ul>
+        <li>🔍 Accessibility for visually impaired users</li>
+        <li>📚 Educational tools for visual recognition</li>
+        <li>🛠️ Real-time debugging or documentation assistant</li>
+        <li>🌾 Smart farming applications (object/plant recognition)</li>
+        <li>🤖 Robotics vision and autonomy support</li>
+      </ul>
+
+      <div class="project-links">
+        <a href="https://github.com/brianmahove/SmolVLM-Flutter-App" class="project-link-button">GitHub Repo</a>
+        <a href="assets/smolvlm-apk-download.apk" class="project-link-button">Download APK</a>
+      </div>
+
+      <h3>📸 Demo</h3>
+      <div class="project-image">
+        <img src="assets/smolvlm-demo.gif" alt="SmolVLM App Demo GIF"/>
+      </div>
+
+      <h3>🎥 Project Demo Video</h3>
+      <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+        <iframe width="1006" height="566" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" title="SmolVLM Flutter App Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+
+      <h3>🤝 Contributions</h3>
+      <p>
+        Open to contributions, feature suggestions, or bug reports! Feel free to fork the repo, open issues, or connect on LinkedIn.
+      </p>
+
+    </div>
+  </div>
+</section>
+
+  </main>
+
+ 
+  <footer>
+    <div class="container">
+        <a href="#top" class="back-to-top"># BACK TO TOP</a>
+        <div class="footer-social-icons">
+            
+            <a href="https://www.facebook.com/mahovebrian" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/brianmahove" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@techondemand_" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/263778686550?text=How%20are%20you%20?I%20am%20___." class="footer-social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        <p class="copyright">&copy;2025 Brian Mahove All Rights Reserved.</p>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
