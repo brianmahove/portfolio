@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hand-Gesture Snake Game - Brian Mahove Portfolio</title>
+  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+</head>
+<body> 
+  <a id="top"></a>
+  <header>
+    <div class="container">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/bm_logo.png" alt="Brian Mahove Logo" />
+          </a>
+        </div>
+      
+      <nav>
+        <ul>
+          <li><a href="index.html#about">About me</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact" class="contact-button">Contact Me</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-detail-section">
+      <div class="container">
+        <h1>Hand-Gesture Controlled Snake Game</h1>
+        <p class="project-subtitle">Interactive Game using Computer Vision (OpenCV + MediaPipe + Pygame)</p>
+
+        <div class="project-image">
+          <img src="assets/snake_game_screenshot.png" alt="Hand-Gesture Snake Game Main Image"/>
+        </div>
+
+        <div class="project-description">
+          <h2>Project Overview</h2>
+          <p>
+            This project develops an interactive version of the classic Snake game, controlled entirely through hand gestures detected via a webcam. Leveraging OpenCV for video processing and MediaPipe for robust hand tracking, players can guide the snake by simply moving their index finger. The game interface, including the snake, food, and score, is overlaid directly onto the live camera feed using Pygame, creating an engaging augmented reality (AR) like experience.
+          </p>
+          <p>
+            I built this application from scratch, focusing on integrating real-time computer vision with game logic. The core challenge involved accurately detecting hand landmarks, translating finger movements into snake commands, and seamlessly rendering game elements on top of the dynamic video stream. This project demonstrates practical application of computer vision for intuitive user interaction.
+          </p>
+
+          <h3>Key Features:</h3>
+          <ul>
+            <li>✋ Hand-Gesture Control: Navigate the snake using the tip of your index finger detected by the webcam.</li>
+            <li>🎥 Real-time Camera Overlay: The game is rendered directly on top of your live camera feed, appearing as a single, unified window.</li>
+            <li>🐍 Classic Snake Gameplay: Grow the snake by eating food, avoid self-collision, and navigate wrapping-around boundaries.</li>
+            <li>✨ Dynamic Snake Coloring: The snake's color changes progressively as you gain score.</li>
+            <li>🍎 Emoji Food: Food items are represented by engaging emojis for a modern twist.</li>
+            <li>📊 Score Tracking: Keep track of your high score during gameplay.</li>
+            <li>⏸️ Pause Functionality: Press 'P' to pause and unpause the game.</li>
+            <li>🔄 Restart Option: Easily restart the game after a 'Game Over' by pressing 'R'.</li>
+            <li>🚀 Optimized Performance: Utilizes MediaPipe's efficient hand detection for smooth real-time performance.</li>
+          </ul>
+
+          <h3>Technologies Used:</h3>
+          <p>
+            Python, OpenCV, MediaPipe, Pygame, NumPy
+          </p>
+
+          <div class="project-links">
+            <a href="#" class="project-link-button">Live Demo (Not applicable for local webcam app, consider a video demo link)</a>
+            <a href="#" class="project-link-button">GitHub Repo</a>
+          </div>
+
+          <h3>📺 Project Demo Video</h3>
+          <div class="video-container" style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+            <iframe width="1006" height="566" src="https://www.youtube.com/embed/YOUR_YOUTUBE_VIDEO_ID" title="Hand-Gesture Snake Game Demo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <footer>
+    <div class="container">
+        <a href="#top" class="back-to-top"># BACK TO TOP</a>
+        <div class="footer-social-icons">
+            
+            <a href="https://www.facebook.com/mahovebrian" class="footer-social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/brianmahove" class="footer-social-icon"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="footer-social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.youtube.com/@techondemand_" class="footer-social-icon"><i class="fab fa-youtube"></i></a>
+            <a href="https://wa.me/263778686550?text=How%20are%20you%20?I%20am%20___." class="footer-social-icon"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        <p class="copyright">©2025 Brian Mahove All Rights Reserved.</p>
+    </div>
+</footer>
+  <script src="script.js"></script>
+</body>
+</html>
